@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/form-styles.css">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <header>
+        ENTER YOUR FEEDBACK
+    </header>
+    <form action="/thank-you" method="POST">
+        <caption>Enter your detials below</caption>
+        <!--Text Input-->
+        <label for="name">Full Name</label>
+        <input type="text" name="name"/>
+         
+        <!--Email Input-->
+        <label for="email">Email</label>
+        <input type="email" name="email" required/>
+        
+        
+        <!--Feedback category dropdown-->
+        <label for="category">Select your category</label>
+        <select id="category" name="category" required>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JAVASCRIPT</option>
+            <option value="git">GIT</option>
+            <option value="java">JAVA</option>
+        </select>
+        <!--Preferred Contact Method-->
+        <fieldset>
+            <legend>Preferred Contact Method</legend>
+            <label for="email">
+                <input type="radio" id="email" name="contact" value="email">
+                Email
+            </label>
+            <label for="phone">
+                <input type="radio" id="phone" name="contact" value="phone" checked>
+                Phone
+            </label>
+        </fieldset>
+       
+        <!--Additional interest checkbox-->
+        <fieldset>
+            <legend>Additional Features of Interest</legend>
+            <label for="react">
+                <input type="checkbox" id="react" name="interests" value="react">
+                React
+            </label>
+            <label for="python">
+                <input type="checkbox" id="python" name="interests" value="python">
+                Python
+            </label>
+            <label for="ai">
+                <input type="checkbox" id="ai" name="interests" value="ai">
+                AI
+            </label>
+            <label for="uxdesign">
+                <input type="checkbox" id="uxdesign" name="interests" value="uxdesign">
+                UX Design
+            </label>
+        </fieldset>
+
+        <!--Comments section (textarea)-->
+        <label for="comments">Enter your Comments</label>
+        <textarea id="comments" name="comments" rows="6" cols="30" placeholder="Comments"></textarea>
+       
+        <!--Submit button-->
+        <input class="submit-btn" type="submit" value="submit"/>
+    </form>
+    
+</body>
+</html>
